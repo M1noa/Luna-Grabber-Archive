@@ -1,0 +1,93 @@
+name: Bug Report
+description: File a bug report
+title: "Bug: "
+labels: ["bug", "not fixed"]
+assignees: Smug246
+body:
+  - type: textarea
+    id: what-you-expected
+    attributes:
+      label: What Did You Expect To Happen?
+      placeholder: Please describe what you expected to happen
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What Happened?
+      placeholder: Please describe exactly what happened
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Add Screenshots
+      placeholder: Please include screenshots of the end of the luna.log file and any errors in the terminal/s
+    validations:
+      required: true
+
+  - type: dropdown
+    id: options
+    attributes:
+      label: Which Options Did You Select?
+      multiple: true
+      options:
+        - Add To Startup
+        - Disable Defender
+        - Discord Info
+        - Fake Error
+        - Games
+        - Wifi Info
+        - Ping
+        - Anti Debug/VM
+        - System Info
+        - Common Files
+        - Browser Info
+        - Roblox Info
+        - Obfuscation
+        - Injection
+        - Anti Spam
+        - Self Destruct
+        - File Pumper
+        - Clipboard
+        - Webcam
+        - Wallets
+    validations:
+      required: true
+
+  - type: dropdown
+    id: compilation
+    attributes:
+      label: How Did You Build The File?
+      options:
+        - Standard Python
+        - Pyinstaller
+        - Nuitka
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bind
+    attributes:
+      label: Did You Bind The File?
+      options:
+        - Yes (Execute on Startup)
+        - Yes (Don't execute on startup)
+        - "No"
+    validations:
+      required: true
+        
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Check the following before submitting (If Applicable)
+      options:
+        - label: I have checked the existing [issues](https://github.com/Smug246/Luna-Grabber/issues)
+          required: true
+        - label: I have followed the [installation](https://github.com/Smug246/Luna-Grabber?tab=readme-ov-file#installation) steps
+          required: true
+        - label: I have attempted to resolve my problem by myself
+          required: true
+
